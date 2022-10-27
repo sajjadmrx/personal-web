@@ -3,7 +3,7 @@ import {Skill} from "../../shared/interfaces/skill.interface";
 export const skills: Array<Skill> = [
     {
         id: 1,
-        name: 'javascript',
+        name: 'Javascript',
         icon: 'devicon-javascript-plain'
     },
     {

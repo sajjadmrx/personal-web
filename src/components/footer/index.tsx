@@ -5,7 +5,7 @@ export class FooterComponent extends React.Component<any, any> {
         return (
             <div>
                 <footer className="mx-auto text-center my-8">
-                    <p className="text-gray-500" dir="ltr">
+                    <p className="text-gray-500">
                         تمامی حقوق این سایت محفوظ است.
                     </p>
                 </footer>
