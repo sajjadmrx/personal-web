@@ -3,6 +3,9 @@ import {ProfileComponent} from "../../components/profile";
 import {BiographyComponent} from "../../components/biography";
 import {SkillsComponent} from "../../components/skills";
 import {skills} from "../../components/skills/skills";
+import {ProjectsComponent} from "../../components/projects";
+import {projects} from "../../components/projects/projects";
+
 
 export class HomePage extends React.Component<any, any> {
     render() {
@@ -19,6 +22,11 @@ export class HomePage extends React.Component<any, any> {
                     <main className=" p-6 lg:py-8 lg:px-10 rounded-3xl dark:bg-zinc-900/95">
                         <BiographyComponent/>
                         <SkillsComponent skills={skills}/>
+
+                        <div className="mb-10">
+                            <ProjectsComponent projects={projects}/>
+                        </div>
+
                     </main>
                 </div>
             </div>
