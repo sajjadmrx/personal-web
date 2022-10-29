@@ -9,8 +9,8 @@ export class ProfileComponent extends React.Component<any, any> {
             <div>
                 <div className="flex flex-col justify-center items-center sticky top-8 lg:w-[260px]">
                     <DetailsComponent/>
-                    <SocialMediaComponent/>
                     <InfoComponent/>
+                    <SocialMediaComponent/>
                 </div>
             </div>
         )
