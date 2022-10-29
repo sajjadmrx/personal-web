@@ -9,7 +9,7 @@ export class HeaderComponent extends React.Component<any, any> {
                     fluid={true}
                     rounded={true}
                 >
-                    <Navbar.Brand href="https://flowbite.com/">
+                    <Navbar.Brand href="#">
                         <img
                             src="/assets/icons/logo.png"
                             className="mr-3 h-6 sm:h-9 rounded"
