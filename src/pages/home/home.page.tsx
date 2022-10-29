@@ -5,7 +5,9 @@ import {SkillsComponent} from "../../components/skills";
 import {skills} from "../../components/skills/skills";
 import {ProjectsComponent} from "../../components/projects";
 import {projects} from "../../components/projects/projects";
-
+import {FontAwesomeIcon} from "@fortawesome/react-fontawesome";
+import {faUser} from '@fortawesome/free-solid-svg-icons'
+import {OpenSourceGithubComponent} from "../../components/open-sources/github";
 
 export class HomePage extends React.Component<any, any> {
     render() {
@@ -25,6 +27,10 @@ export class HomePage extends React.Component<any, any> {
 
                         <div className="mb-10">
                             <ProjectsComponent projects={projects}/>
+                        </div>
+
+                        <div className="mb-10">
+                            <OpenSourceGithubComponent/>
                         </div>
 
                     </main>

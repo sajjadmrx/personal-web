@@ -26,7 +26,7 @@ export class ProjectComponent extends React.Component<Prop, StatusState> {
         projectStatus: status.LOADING
     }
 
-    async componentWillUnmount() {
+    async componentDidMount() {
         try {
             const url: string = this.props.project.checkUrl
             await axios.get(url, {
@@ -42,8 +42,6 @@ export class ProjectComponent extends React.Component<Prop, StatusState> {
         }
     }
 
-    componentDidMount() {
-    }
 
     render() {
 
