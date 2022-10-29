@@ -1,10 +1,10 @@
 import React from "react";
 import {FontAwesomeIcon} from "@fortawesome/react-fontawesome";
-import {faUser} from "@fortawesome/free-solid-svg-icons";
 import {Alert, Spinner} from "flowbite-react";
 import {GithubReposComponent} from "./repos";
 import {GithubRepo} from "../../../shared/interfaces/github.interface";
 import {GithubUserService} from "../../../shared/services/github/github-user.service";
+import {faGithub} from '@fortawesome/free-brands-svg-icons'
 
 interface State {
     repos: GithubRepo[],
@@ -44,8 +44,8 @@ export class OpenSourceGithubComponent extends React.Component<any, State> {
     render() {
         return (
             <div>
-                <div className="flex items-center mb-2 ">
-                    <FontAwesomeIcon icon={faUser}/>
+                <div className="flex items-center mb-5">
+                    <FontAwesomeIcon icon={faGithub} size={"2x"}/>
                     <h2 className="mx-2 text-2xl font-semibold">
                         پروژهای متن باز
                     </h2>
