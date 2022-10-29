@@ -11,13 +11,19 @@ interface Prop {
     project: Project
 }
 
+enum status {
+    ONLINE,
+    OFFLINE,
+    LOADING
+}
+
 interface StatusState {
-    isOnline: boolean | undefined
+    projectStatus: status
 }
 
 export class ProjectComponent extends React.Component<Prop, StatusState> {
     state: StatusState = {
-        isOnline: undefined
+        projectStatus: status.LOADING
     }
 
     async componentWillUnmount() {
@@ -27,11 +33,11 @@ export class ProjectComponent extends React.Component<Prop, StatusState> {
                 timeout: 1000
             })
             this.setState({
-                isOnline: true
+                projectStatus: status.ONLINE
             })
         } catch (e) {
             this.setState({
-                isOnline: false
+                projectStatus: status.OFFLINE
             })
         }
     }
@@ -46,10 +52,10 @@ export class ProjectComponent extends React.Component<Prop, StatusState> {
                 <div className="indicator w-60 cursor-pointer">
                     <div className="">
 
-                        {this.state.isOnline == undefined ?
+                        {this.state.projectStatus == status.LOADING ?
                             <span
                                 className="indicator-item indicator-top indicator-end badge badge-warning">نامعلوم</span>
-                            : this.state.isOnline ? <span
+                            : this.state.projectStatus == status.ONLINE ? <span
                                     className="indicator-item indicator-top indicator-end badge badge-accent">در دسترس</span> :
                                 <span
                                     className="indicator-item indicator-top indicator-end badge badge-error">آفلاین</span>
