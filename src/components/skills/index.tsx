@@ -20,12 +20,15 @@ export class SkillsComponent extends React.Component<Prop, any> {
                     <div className="mx-6 grid  sm:grid-cols-2 gap-y-4 gap-x-6">
                         {this.props.skills.map((skill: Skill) => {
                             return (
-                                <div key={skill.id} dir={'auto'}>
-                                 <span
-                                     className="inline-block font-medium text-md mb-2 dark:text-gray-300">
+                                <div key={skill.id} dir={'auto'}
+                                     className={'border-l border-success hover:border-error'}>
+                                    <div className={'ml-3'}>
+                                           <span
+                                               className="inline-block font-medium text-md dark:text-gray-300">
                                      <i className={skill.icon + " colored mr-2"}></i>
-                                     {skill.name}
+                                               {skill.name}
                                      </span>
+                                    </div>
                                 </div>
                             )
                         })}
