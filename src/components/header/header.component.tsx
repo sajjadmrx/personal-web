@@ -1,5 +1,7 @@
 import React from "react";
 import {Navbar} from "flowbite-react";
+import {FontAwesomeIcon} from "@fortawesome/react-fontawesome";
+import {faGithub} from "@fortawesome/free-brands-svg-icons"
 
 export class HeaderComponent extends React.Component<any, any> {
     render() {
@@ -24,7 +26,8 @@ export class HeaderComponent extends React.Component<any, any> {
                         <Navbar.Link
                             href="https://github.com/sajjadmrx/personal-web"
                         >
-                            لینک سورس سایت
+                            <span> سورس سایت </span>
+                            <FontAwesomeIcon icon={faGithub}/>
                         </Navbar.Link>
 
                     </Navbar.Collapse>
