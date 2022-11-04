@@ -14,12 +14,11 @@ export class DetailsComponent extends React.Component<any, any> {
         return (
             <div className={'text-center'}>
 
-                <Avatar bordered={true}
-                        img={this.state.avatarUrl}
-                        size={"xl"}
-                        className=" mb-6"
-                        status="online"
-                        alt={"sajjadmrx avatar"}
+                <Avatar
+                    img={this.state.avatarUrl}
+                    size={"xl"}
+                    className={'mb-6'}
+                    alt={"sajjadmrx avatar"}
                 >
 
                 </Avatar>
