@@ -32,10 +32,15 @@ export class ProjectComponent extends React.Component<Prop, StatusState> {
             await axios.get(url, {
                 timeout: 1000
             })
-            this.setState({
-                projectStatus: status.ONLINE
-            })
-        } catch (e) {
+
+        } catch (e: any) {
+            const res = e.response
+            if (res.status == 404) {
+                this.setState({
+                    projectStatus: status.ONLINE
+                })
+                return;
+            }
             this.setState({
                 projectStatus: status.OFFLINE
             })
