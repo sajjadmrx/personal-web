@@ -4,6 +4,9 @@ import {DiscordActivity, DiscordPresence} from "../../shared/interfaces/discordA
 import {DiscordAppIconComponent} from "./components/app-icon.component";
 import {DiscordAppDetailsComponent} from "./components/app-details.component";
 import {DiscordAppTimerComponent} from "./components/app-timer.component";
+import {FontAwesomeIcon} from "@fortawesome/react-fontawesome";
+import {faUser} from "@fortawesome/free-solid-svg-icons";
+import {Badge} from "react-daisyui";
 
 const serverUrl: string = "wss://api.sajjadmrx.ir"
 const socket = io(serverUrl);
@@ -38,7 +41,8 @@ export function DiscordActivityComponent() {
                 <div className="mb-12" id="discord">
                     <div className="flex items-center ">
                         <span className="fab fa-discord text-2xl mr-2"></span>
-                        <h5 className="mx-2 text-2xl font-semibold ">
+                        <Badge className={"p-4 mr-2 mx-2 text-2xl"} color={"ghost"}>👷</Badge>
+                        <h5 className="mx-2 text-2xl font-semibold">
                             فعالیت در حال انجام
                         </h5>
                     </div>

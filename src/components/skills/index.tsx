@@ -1,6 +1,7 @@
 import React from "react";
 import 'devicon'
 import {Skill} from "../../shared/interfaces/skill.interface";
+import {Badge} from "react-daisyui";
 
 interface Prop {
     skills: Skill[]
@@ -12,8 +13,8 @@ export class SkillsComponent extends React.Component<Prop, any> {
             <div>
                 <div className="mb-10">
                     <div className="flex items-center  mb-4 dark:text-gray-300">
+                        <Badge className={"p-4 mr-2 mx-2 text-2xl"} color={"ghost"}>👨‍💻</Badge>
                         <h5 className="mx-2 text-2xl font-semibold dark:text-gray-200">
-                            👨‍💻
                             مهارت ها
                         </h5>
                     </div>
