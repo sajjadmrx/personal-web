@@ -4,16 +4,17 @@ import './index.css';
 import reportWebVitals from './reportWebVitals';
 import {HomePage} from "./pages/home/home.page";
 import {PageWrapper} from "./wrappers/page.wrapper";
+import "@fortawesome/fontawesome-svg-core"
 
 const root = ReactDOM.createRoot(
-  document.getElementById('root') as HTMLElement
+    document.getElementById('root') as HTMLElement
 );
 root.render(
-  <React.StrictMode>
-    <PageWrapper>
-        <HomePage></HomePage>
-    </PageWrapper>
-  </React.StrictMode>
+    <React.StrictMode>
+        <PageWrapper>
+            <HomePage></HomePage>
+        </PageWrapper>
+    </React.StrictMode>
 );
 
 // If you want to start measuring performance in your app, pass a function
