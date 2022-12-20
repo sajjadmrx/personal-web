@@ -109,3 +109,24 @@ html {
     "Segoe UI Symbol", "Noto Color Emoji";
     scroll-behavior: smooth;
 }
+
+
+/* scrolbar */
+::-webkit-scrollbar {
+    width: 0.5em;
+}
+
+/* scrolbar backgrond with theme  */
+html[data-theme="dark"]::-webkit-scrollbar {
+    background-color: #1d1d1d;
+}
+
+/* scrolbar thumb */
+::-webkit-scrollbar-thumb {
+    background-color: #1d1d1d;
+}
+
+/* scrolbar thumb on hover */
+::-webkit-scrollbar-thumb:hover {
+    background-color: #1d1d1d;
+}

@@ -13,15 +13,14 @@ export function DiscordAppDetailsComponent(props: Props) {
         details: activity?.details || "",
         state: activity?.state || ""
     }
-    console.log(activity)
     return (
         <div>
             <div
-                className="w-full flex-none mx-2 text-2xl font-semibold dark:text-gray-100"
+                className="w-full flex-none mx-2 text-2xl font-semibold "
                 id="nameApp">
                 {item.name}
             </div>
-            <div className="flex-auto text-gray-400 my-1">
+            <div className="flex-auto my-1">
                 <div>
                     {item.details}
                 </div>

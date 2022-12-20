@@ -31,7 +31,7 @@ export function HomePage() {
                     <DiscordActivityComponent/>
 
                     <div className="mb-10">
-                        {/*<OpenSourceGithubComponent/>*/}
+                        <OpenSourceGithubComponent/>
                     </div>
 
                 </main>

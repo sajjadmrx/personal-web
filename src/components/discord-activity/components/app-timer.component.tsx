@@ -29,10 +29,9 @@ export function DiscordAppTimerComponent(props: Props) {
         return (
             <div>
                 <div className="flex-1 inline-flex items-center">
-                    <i className="fas fa-clock mr-2"></i>
-                    <p className="" id="timestampsApp">
+                    <div className="font-semibold">
                         {timer}
-                    </p>
+                    </div>
                 </div>
             </div>
         )

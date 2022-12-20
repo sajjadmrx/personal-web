@@ -67,13 +67,13 @@ export class ProjectComponent extends React.Component<Prop, StatusState> {
                         <img alt={this.props.project.names.eng + " Logo"} className="rounded-[1rem]"
                              src={this.props.project.image}/>
                         <div className="card bg-secondary/80  -left-0 -top-[160px] py-2">
-                            <div className="cad-header text-center">
+                            <div className="cad-header text-center text-gray-300">
                                 {this.props.project.names.farsi}
                             </div>
                             <div
                                 className="card-body">
                                 <div
-                                    className="mr-4 scrollbar scrollbar-thumb-gray-900 scrollbar-track-gray-500 rounded-md">
+                                    className="mr-4 scrollbar scrollbar-thumb-gray-900 text-gray-400 scrollbar-track-gray-500 rounded-md">
                                     <div className="h-[100px]">
                                   <span>
                                        {this.props.project.description}
@@ -84,7 +84,7 @@ export class ProjectComponent extends React.Component<Prop, StatusState> {
                             <div className="text-center">
                                 <div className="grid grid-cols-1">
                                     <a href={this.props.project.url} target={"_blank"} rel="noreferrer">
-                                        <Button className={""} color={"ghost"}>
+                                        <Button className={"text-gray-300"} color={"ghost"}>
                                             <FontAwesomeIcon icon={faExternalLink} className="ml-3"/>
                                             <span> لینک سایت</span>
                                         </Button>

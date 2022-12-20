@@ -38,7 +38,7 @@ export function DiscordActivityComponent() {
                 <div className="mb-12" id="discord">
                     <div className="flex items-center ">
                         <span className="fab fa-discord text-2xl mr-2"></span>
-                        <h5 className="mx-2 text-2xl font-semibold dark:text-gray-200">
+                        <h5 className="mx-2 text-2xl font-semibold ">
                             فعالیت در حال انجام
                         </h5>
                     </div>

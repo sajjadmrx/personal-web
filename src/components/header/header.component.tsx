@@ -2,37 +2,53 @@ import React from "react";
 import {Navbar} from "flowbite-react";
 import {FontAwesomeIcon} from "@fortawesome/react-fontawesome";
 import {faGithub} from "@fortawesome/free-brands-svg-icons"
+import {ThemeSelectorComponent} from "../theme-selector/themeSelector.component";
 
 export class HeaderComponent extends React.Component<any, any> {
     render() {
         return (
-            <header dir={"ltr"} color={"dark"} className={"mb-5 dark"}>
-                <Navbar
-                    fluid={true}
-                    rounded={true}
-                >
-                    <Navbar.Brand href="#">
+            <div className="navbar bg-base-100" dir={"auto"}>
+                <div className="navbar-start">
+                    <div className="dropdown">
+                        <label tabIndex={0} className="btn btn-ghost btn-circle">
+                            <svg
+                                xmlns="http://www.w3.org/2000/svg"
+                                className="h-5 w-5"
+                                fill="none"
+                                viewBox="0 0 24 24"
+                                stroke="currentColor"
+                            >
+                                <path
+                                    strokeLinecap="round"
+                                    strokeLinejoin="round"
+                                    strokeWidth="2"
+                                    d="M4 6h16M4 12h16M4 18h7"
+                                />
+                            </svg>
+                        </label>
+                        <ul
+                            tabIndex={0}
+                            className="menu menu-compact dropdown-content mt-3 p-2 shadow bg-base-100 rounded-box w-52"
+                        >
+                            <li>
+
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div className="navbar-end ml-3">
+
+                    <ThemeSelectorComponent/>
+                    <div>
                         <img
                             src="/assets/icons/logo.png"
                             className="mr-3 h-6 sm:h-9 rounded"
-                            alt="Flowbite Logo"
+                            alt="sajjadmrx Logo"
                         />
-                        <span className="self-center whitespace-nowrap text-xl font-semibold dark:text-white">
-      sajjadmrx.ir
-    </span>
-                    </Navbar.Brand>
-                    <Navbar.Toggle/>
-                    <Navbar.Collapse>
-                        <Navbar.Link
-                            href="https://github.com/sajjadmrx/personal-web"
-                        >
-                            <span> سورس سایت </span>
-                            <FontAwesomeIcon icon={faGithub}/>
-                        </Navbar.Link>
-
-                    </Navbar.Collapse>
-                </Navbar>
-            </header>
+                    </div>
+                </div>
+            </div>
         )
     }
 }
