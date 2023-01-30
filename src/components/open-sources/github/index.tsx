@@ -22,14 +22,11 @@ export class OpenSourceGithubComponent extends React.Component<any, State> {
             const username: string = 'sajjadmrx'
             const githubUserService = new GithubUserService(username);
             const repos: Array<GithubRepo> = await githubUserService.getRepos()
-            const tops: Array<GithubRepo> = repos.filter(rep =>
-                rep.stargazers_count > 1 &&
-                rep.owner.login == username && rep.name != username
-            )
 
             const easyExpressRouter: GithubRepo | undefined = repos.find(rep => rep.id == 551021489)
             if (easyExpressRouter)
-                tops.unshift(easyExpressRouter)
+                repos.unshift(easyExpressRouter)
+            const tops = repos.sort((a, b) => b.stargazers_count - a.stargazers_count)
             this.setState({
                 repos: tops
             })

@@ -44,5 +44,6 @@ export interface GithubRepo {
     html_url: string,
     stargazers_count: number,
     created_at: string,
+    forks_count: number
     updated_at: string
 }
