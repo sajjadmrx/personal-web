@@ -15,7 +15,7 @@ export class GithubReposComponent extends React.Component<Props, any> {
     render() {
         return (
             <div className={"mx-4 w-auto rounded py-5 p-5 "} dir={"ltr"}>
-                <div className="grid grid-cols-2 gap-4">
+                <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
                     {this.repos.map((rep) => {
                         return (
                             <Tooltip message={rep.description || "no description"}>
