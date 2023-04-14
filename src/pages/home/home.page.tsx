@@ -1,13 +1,12 @@
-import React, {useContext, useState} from "react";
-import {ProfileComponent} from "../../components/profile";
-import {BiographyComponent} from "../../components/biography";
-import {SkillsComponent} from "../../components/skills";
-import {skills} from "../../components/skills/skills";
-import {ProjectsComponent} from "../../components/projects";
-import {projects} from "../../components/projects/projects";
+import React, { useContext, useState } from "react";
+import { ProfileComponent } from "../../components/profile";
+import { BiographyComponent } from "../../components/biography";
+import { SkillsComponent } from "../../components/skills";
+import { ProjectsComponent } from "../../components/projects";
+import { projects } from "../../components/projects/projects";
 
-import {OpenSourceGithubComponent} from "../../components/open-sources/github";
-import {DiscordActivityComponent} from "../../components/discord-activity";
+import { OpenSourceGithubComponent } from "../../components/open-sources/github";
+import { DiscordActivityComponent } from "../../components/discord-activity";
 
 export function HomePage() {
     return (
@@ -15,23 +14,23 @@ export function HomePage() {
             <div className="flex flex-col shadow-md rounded-3xl lg:flex-row dark:bg-zinc-900/95">
                 <aside className="bg-secondary rounded-3xl p-8 dark:bg-[#131313]">
 
-                    <ProfileComponent/>
+                    <ProfileComponent />
 
 
                 </aside>
 
                 <main className=" p-6 lg:py-8 lg:px-10 rounded-3xl dark:bg-zinc-900/95">
-                    <BiographyComponent/>
-                    <SkillsComponent skills={skills}/>
+                    <BiographyComponent />
+                    <SkillsComponent />
 
                     <div className="mb-10">
-                        <ProjectsComponent projects={projects}/>
+                        <ProjectsComponent projects={projects} />
                     </div>
 
-                    <DiscordActivityComponent/>
+                    <DiscordActivityComponent />
 
                     <div className="mb-10">
-                        <OpenSourceGithubComponent/>
+                        <OpenSourceGithubComponent />
                     </div>
 
                 </main>
