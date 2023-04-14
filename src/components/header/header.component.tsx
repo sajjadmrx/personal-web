@@ -1,13 +1,9 @@
 import React from "react";
-import {Navbar} from "flowbite-react";
-import {FontAwesomeIcon} from "@fortawesome/react-fontawesome";
-import {faGithub} from "@fortawesome/free-brands-svg-icons"
-import {ThemeSelectorComponent} from "../theme-selector/themeSelector.component";
 
 export class HeaderComponent extends React.Component<any, any> {
     render() {
         return (
-            <div className="navbar bg-base-100" dir={"auto"}>
+            <div className="navbar bg-base-100" >
                 <div className="navbar-start">
                     <div className="dropdown">
                         <label tabIndex={0} className="btn btn-ghost btn-circle">
@@ -39,7 +35,6 @@ export class HeaderComponent extends React.Component<any, any> {
 
                 <div className="navbar-end ml-3">
 
-                    <ThemeSelectorComponent/>
                     <div>
                         <img
                             src="/assets/icons/logo.png"
