@@ -1,12 +1,12 @@
 import React from "react";
-import {Project} from "../../shared/interfaces/project.interface";
+import { Project } from "../../shared/interfaces/project.interface";
 
-import {Button} from 'react-daisyui'
-import {FontAwesomeIcon} from "@fortawesome/react-fontawesome";
-import {faExternalLink} from '@fortawesome/free-solid-svg-icons'
+import { Badge, Button } from 'react-daisyui'
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faExternalLink } from '@fortawesome/free-solid-svg-icons'
 import axios from "axios";
-
-
+import { AiFillGithub } from "react-icons/ai"
+import { HiOutlineStatusOnline } from "react-icons/hi"
 interface Prop {
     project: Project
 }
@@ -54,30 +54,38 @@ export class ProjectComponent extends React.Component<Prop, StatusState> {
             <div>
                 <div className="indicator w-60 cursor-pointer">
                     <div className="">
+                        <div className=" ">
+                            {this.state.projectStatus == status.LOADING ?
+                                <Badge className="indicator-item" color="warning">نامعلوم</Badge>
+                                : this.state.projectStatus == status.ONLINE ? <Badge color="success" className="indicator-item gap-1">
+                                    <HiOutlineStatusOnline />
+                                    در دسترس</Badge> :
+                                    <Badge className="indicator-item" color="error">آفلاین</Badge>
+                            }
+                            {
+                                this.props.project.openSource.supported ?
+                                    <Badge color="info" className="indicator-item gap-1  indicator-top indicator-start badge badge-secondary"
+                                    >
+                                        <AiFillGithub />
+                                        متن باز</Badge> : ""
+                            }
+                        </div>
 
-                        {this.state.projectStatus == status.LOADING ?
-                            <span
-                                className="indicator-item indicator-top indicator-end badge badge-warning">نامعلوم</span>
-                            : this.state.projectStatus == status.ONLINE ? <span
-                                    className="indicator-item indicator-top indicator-end badge badge-accent">در دسترس</span> :
-                                <span
-                                    className="indicator-item indicator-top indicator-end badge badge-error">آفلاین</span>
-                        }
 
                         <img alt={this.props.project.names.eng + " Logo"} className="rounded-[1rem]"
-                             src={this.props.project.image}/>
+                            src={this.props.project.image} />
                         <div className="card bg-secondary/80  -left-0 -top-[160px] py-2">
                             <div className="cad-header text-center text-gray-300">
                                 {this.props.project.names.farsi}
                             </div>
                             <div
-                                className="card-body">
+                                className="card-body scrollbar scrollbar-thumb-gray-900 ">
                                 <div
-                                    className="mr-4 scrollbar scrollbar-thumb-gray-900 text-gray-400 scrollbar-track-gray-500 rounded-md">
+                                    className="mr-4  text-gray-400  rounded-md">
                                     <div className="h-[100px]">
-                                  <span>
-                                       {this.props.project.description}
-                                  </span>
+                                        <span>
+                                            {this.props.project.description}
+                                        </span>
                                     </div>
                                 </div>
                             </div>
@@ -85,7 +93,7 @@ export class ProjectComponent extends React.Component<Prop, StatusState> {
                                 <div className="grid grid-cols-1">
                                     <a href={this.props.project.url} target={"_blank"} rel="noreferrer">
                                         <Button className={"text-gray-300"} color={"ghost"}>
-                                            <FontAwesomeIcon icon={faExternalLink} className="ml-3"/>
+                                            <FontAwesomeIcon icon={faExternalLink} className="ml-3" />
                                             <span> لینک سایت</span>
                                         </Button>
                                     </a>

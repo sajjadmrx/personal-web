@@ -4,5 +4,9 @@ export interface Project {
     url: string
     image: string
     description: string | undefined,
-    checkUrl: string
+    checkUrl: string,
+    openSource: {
+        supported: boolean,
+        url?: string
+    }
 }

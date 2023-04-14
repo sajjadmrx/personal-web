@@ -1,7 +1,7 @@
 import React from "react";
-import {Project} from "../../shared/interfaces/project.interface";
-import {ProjectComponent} from "./project";
-import {Badge} from "react-daisyui";
+import { Project } from "../../shared/interfaces/project.interface";
+import { ProjectComponent } from "./project";
+import { Badge } from "react-daisyui";
 
 interface Props {
     projects: Array<Project>
@@ -17,12 +17,12 @@ export class ProjectsComponent extends React.Component<Props, any> {
                         پروژها
                     </h5>
                 </div>
-                <div className="grid grid-cols-1 gap-5 sm:grid-cols-2 lg:grid-cols-3 mx-6 py-5"
+                <div className="grid grid-cols-1 gap-0 md:gap-5 sm:grid-cols-2 lg:grid-cols-3 mx-16 md:mx-6 py-5"
                 >
                     {this.props.projects.map((project: Project) => {
                         return (
                             <div key={project.id}>
-                                <ProjectComponent project={project}/>
+                                <ProjectComponent project={project} />
                             </div>
                         )
                     })}
