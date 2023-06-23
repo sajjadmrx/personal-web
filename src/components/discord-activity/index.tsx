@@ -9,6 +9,7 @@ import {faUser} from "@fortawesome/free-solid-svg-icons";
 import {Badge} from "react-daisyui";
 
 const serverUrl: string = "wss://api.sajjadmrx.ir"
+// const serverUrl: string = "ws://localhost:4000"
 const socket = io(serverUrl);
 const actKey = 'Custom Status'
 
@@ -25,8 +26,7 @@ export function DiscordActivityComponent() {
         socket.on('disconnect', () => {
             setConnected(false);
         });
-
-        socket.on("presenceUpdated", (data: DiscordPresence) => {
+        socket.on("PRESENCE_UPDATED", (data: DiscordPresence) => {
             setDiscordPresence(data)
             // const activity: DiscordActivity | undefined = data.activities[data.activities.length - 1]
             const activity: DiscordActivity | undefined = data.activities.find((act) => act.name != actKey)
@@ -37,7 +37,7 @@ export function DiscordActivityComponent() {
 
     return (
         <div>
-            {isConnected && discordPresence.avatar ? <div className={"mt-10"}>
+            {isConnected && activity ? <div className={"mt-10"}>
                 <div className="mb-12" id="discord">
                     <div className="flex items-center ">
                         <span className="fab fa-discord text-2xl mr-2"></span>
