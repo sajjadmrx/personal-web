@@ -21,21 +21,22 @@
     "daisyui": "^2.33.0",
     "devicon": "^2.15.1",
     "discord.js": "^14.7.1",
-    "flowbite": "^1.5.3",
-    "flowbite-react": "^0.3.2",
+    "flowbite": "^1.6.6",
+    "flowbite-react": "^0.4.9",
     "react": "^18.2.0",
     "react-daisyui": "^2.4.4",
     "react-dom": "^18.2.0",
     "react-icons": "^4.8.0",
-    "react-scripts": "5.0.1",
     "socket.io-client": "^4.5.4",
     "tailwind-scrollbar": "^2.0.1",
     "typescript": "^4.8.4",
     "web-vitals": "^2.1.4"
   },
   "scripts": {
-    "start": "react-scripts start",
-    "build": "react-scripts build",
+    "dev": "vite",
+    "build": "vite build",
+    "serve": "vite preview",
+    "deploy": "vite build && gh-pages -d dist",
     "test": "react-scripts test",
     "eject": "react-scripts eject"
   },
@@ -58,8 +59,10 @@
     ]
   },
   "devDependencies": {
+    "@vitejs/plugin-react": "^4.0.1",
     "autoprefixer": "^10.4.12",
     "postcss": "^8.4.18",
-    "tailwindcss": "^3.2.1"
+    "tailwindcss": "^3.2.1",
+    "vite": "^4.3.9"
   }
 }
